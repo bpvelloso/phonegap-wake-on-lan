@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.matlipe.WakeOnLan"
+        version="1.0.0">
+
+    <name>Wake On Lan</name>
+    <description>
+        Send Magic Packets to Wake Up Devices
+    </description>
+    <author>Mat Lipe</author>
+    <license>MIT</license>
+    <keywords>Wake On Lan</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/WakeOnLan.js" name="WakeOnLan">
+        <clobbers target="window.plugins.WakeOnLan"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WakeOnLan">
+                <param name="android-package" value="com.matlipe.WakeOnLan"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <source-file src="src/WakeOnLan.java" target-dir="src/com/matlipe/WakeOnLan"/>
+    </platform>
+</plugin>
