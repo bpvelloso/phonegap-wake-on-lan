@@ -1,6 +1,6 @@
 var WakeOnLan  = {
-	wake : function( $ipAddress, $macAddress, successCallback, errorCallback ){
-		cordova.exec( successCallback, errorCallback, "WakeOnLan", "wake", [$macAddress, $ipAddress] );
+	wake : function( $broadcastIpAddress, $macAddress, successCallback, errorCallback ){
+		cordova.exec( successCallback, errorCallback, "WakeOnLan", "wake", [$broadcastIpAddress, $macAddress] );
 	},
 
 	install : function(){

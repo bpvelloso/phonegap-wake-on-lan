@@ -18,22 +18,29 @@ public class WakeOnLan extends CordovaPlugin {
 
 
 	@Override
-	public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+		boolean result = false;
 		if( WAKE_ACTION.equals( action ) ){
-			return wake( data );
+			if( wake( args ) ){
+				callbackContext.success( "Device has been woken up" );
+				result = true;
+			} else {
+				callbackContext.error( "Device did not wake up" );
+			}
 		} else {
-System.out.println( "Invalid action : " + action + " passed" );
-        }
+			callbackContext.error( "Invalid action : " + action + " passed" );
+		}
 
-		return false;
+		return result;
 	}
 
 
-	private Boolean wake( JSONArray data ) {
+	private Boolean wake( JSONArray args ) {
 		Boolean result = false;
 		try{
-			String macStr = data.getString( 0 );
-			String ipStr = data.getString( 1 );
+			String ipStr = args.getString( 0 );
+			String macStr = args.getString( 1 );
+
 
 			byte[] macBytes = getMacBytes( macStr );
 			byte[] bytes = new byte[ 6 + 16 * macBytes.length ];
