@@ -2,7 +2,7 @@
 Very basic plugin for sending wake on lan requests from a phonegap app.
 
 # Installation
-1. cordova add plugin https://github.com/lipemat/phonegap-wake-on-lan.git
+1. phonegap plugin add https://github.com/lipemat/phonegap-wake-on-lan.git
 
 # Usage in JS
 ~~~~
