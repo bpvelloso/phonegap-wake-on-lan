@@ -8,7 +8,7 @@ var WakeOnLan  = {
 			window.plugins = {};
 		}
 
-		window.plugins.WakeOnLan = this;
+		window.plugins.WakeOnLan = WakeOnLan;
 		return window.plugins.WakeOnLan;
 	}
 };
