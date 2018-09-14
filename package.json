@@ -1,0 +1,47 @@
+{
+  "name": "cordova-wol-plugin",
+  "version": "1.0.0",
+  "description": "Cordova WOL plugin.",
+  "cordova": {
+    "id": "cordova-wol-plugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpvelloso/phonegap-wake-on-lan.git"
+  },
+  "keywords": [
+    "cordova",
+    "wol",
+    "cordova-ios",
+    "cordova-android",
+    "ios",
+    "android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-ios",
+      "version": ">=3.8"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    }
+  ],
+  "dependencies": {
+    "mkpath": ">=1.0.0",
+    "xml2js": ">=0.4",
+    "rimraf": ">=2.4",
+    "node-version-compare": ">=1.0.1",
+    "plist": ">=1.2.0"
+  },
+  "author": "Mat Lipe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bpvelloso/phonegap-wake-on-lan/issues"
+  },
+  "homepage": "https://github.com/bpvelloso/phonegap-wake-on-lan#readme"
+}
